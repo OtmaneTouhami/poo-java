@@ -37,6 +37,8 @@ This exercise models an employee management application that categorizes employe
 **Overview**
 This exercise designs an order management system for a company selling computers. It employs principles of class association, composition, and encapsulation to represent the relationships between clients, orders, computers, and order lines.
 
+![Image description](Main.jpg)
+
 **Code Structure and Explanation**
 * **Class Category:** Groups computers into categories based on shared characteristics, illustrating a composition of multiple computers within a category.
 * **Class Client:** Associates each client with their orders, demonstrating a one-to-many relationship between client and order.
