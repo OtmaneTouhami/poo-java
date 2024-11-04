@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dce572bc-6ee5-49f9-a980-f64f4c859996" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TP3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../poo-java.iml" afterDir="false" />
-    </list>
+    <list default="true" id="dce572bc-6ee5-49f9-a980-f64f4c859996" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730710006603</updated>
-      <workItem from="1730710008130" duration="6730000" />
+      <workItem from="1730710008130" duration="7051000" />
     </task>
     <servers />
   </component>
