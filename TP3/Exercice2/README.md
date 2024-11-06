@@ -43,17 +43,8 @@ public class Calculateur {
     public void testRacineCarree(int n) throws RacineCarreeException {
         if (n < 0) throw new RacineCarreeException(n);
     }
-
-    public static void main(String[] args) {
-        Calculateur c = new Calculateur();
-        try {
-            c.testRacineCarree(-5);
-            c.testRacineCarree(25);
-        } catch (RacineCarreeException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-    }
+    
+     // main method here
 }
 ```
 
@@ -66,9 +57,21 @@ public class Calculateur {
     * The condition `if (n < 0)` checks if the number is negative, and if so, the `RacineCarreeException` is triggered with `throw new RacineCarreeException(n);`.
 
 * **Main Method**:
-    * Calculateur Object Creation: A `Calculateur` object `c` is created.
-    * testRacineCarree Calls: The `testRacineCarree` method is called with two values: -5 (negative number that triggers the exception) and 25 (positive number that doesn't trigger the exception).
-    * Exception Handling: The try-catch block captures the `RacineCarreeException` when the number is negative. The exception message is displayed with `System.out.println(e.getMessage());`, and `e.printStackTrace();` is used to display the complete exception call stack.
+```java
+public static void main(String[] args) {
+    Calculateur c = new Calculateur();
+    try {
+        c.testRacineCarree(-5);
+        c.testRacineCarree(25);
+    } catch (RacineCarreeException e) {
+        System.out.println(e.getMessage());
+        e.printStackTrace();
+    }
+}
+``` 
+  * `Calculateur` Object Creation: A `Calculateur` object `c` is created.
+  * testRacineCarree Calls: The `testRacineCarree` method is called with two values: -5 (negative number that triggers the exception) and 25 (positive number that doesn't trigger the exception).
+  * Exception Handling: The try-catch block captures the `RacineCarreeException` when the number is negative. The exception message is displayed with `System.out.println(e.getMessage());`, and `e.printStackTrace();` is used to display the complete exception call stack.
 
 ## 3. Execution and Results
 
@@ -81,6 +84,14 @@ During execution:
 
 2. Second call `c.testRacineCarree(25);`:
 * Since 25 is a positive number, there's no issue and the exception isn't triggered.
+
+### Test Case
+```
+C'est une exception de type RacineCarreeException. Nombre négatif : -5
+Exercice2.RacineCarreeException: C'est une exception de type RacineCarreeException. Nombre négatif : -5
+	at Exercice2.Calculateur.testRacineCarree(Calculateur.java:11)
+	at Exercice2.Calculateur.main(Calculateur.java:17)
+```
 
 ## Conclusion
 

@@ -18,6 +18,7 @@ public class Calculateur {
             c.testRacineCarree(25);
         } catch (RacineCarreeException e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

@@ -16,6 +16,7 @@ public class Evaluateur {
             evaluateur.verifierNote(25);
         } catch (NoteInvalideException e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

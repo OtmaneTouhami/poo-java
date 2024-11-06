@@ -44,16 +44,7 @@ public class Evaluateur {
         if (note < 0 || note > 20) throw new NoteInvalideException(note);
     }
 
-    public static void main(String[] args) {
-        Evaluateur evaluateur = new Evaluateur();
-        try {
-            evaluateur.verifierNote(15);
-            evaluateur.verifierNote(25);
-        } catch (NoteInvalideException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-    }
+    // main method here
 }
 ```
 
@@ -67,9 +58,20 @@ public class Evaluateur {
     * If the condition is true, `throw new NoteInvalideException(note);` creates and throws an exception with the faulty grade.
 
 * **Main Method**:
-    * **Evaluateur Object Creation**: An `evaluateur` object of type `Evaluateur` is created.
-    * **verifierNote Calls**: The `verifierNote` method is called with two values: 15 (within range, so no exception) and 25 (outside range, triggers exception).
-    * **Exception Handling**: The `try-catch` block captures `NoteInvalideException` when the grade is out of range. The error message is displayed using `System.out.println(e.getMessage());` and show the stack trace with `e.printStackTrace();`.
+````java
+public static void main(String[] args) {
+  Evaluateur evaluateur = new Evaluateur();
+  try {
+    evaluateur.verifierNote(15);
+    evaluateur.verifierNote(25);
+  } catch (NoteInvalideException e) {
+    System.out.println(e.getMessage());
+  }
+}
+````
+  * **Evaluateur Object Creation**: An `evaluateur` object of type `Evaluateur` is created.
+  * **verifierNote Calls**: The `verifierNote` method is called with two values: 15 (within range, so no exception) and 25 (outside range, triggers exception).
+  * **Exception Handling**: The `try-catch` block captures `NoteInvalideException` when the grade is out of range. The error message is displayed using `System.out.println(e.getMessage());` and show the stack trace with `e.printStackTrace();`.
 
 ## 3. Execution and Results
 
@@ -82,6 +84,13 @@ During execution:
 * Grade 25 is outside the range, which triggers `NoteInvalideException`.
 * The message `"Exception de type NoteInvalideException. Note invalide : 25"` is displayed. And The exception call stack is displayed, showing the methods and lines of code that led to the exception.
 
+### Test Case
+```
+Exception de type NoteInvalideException. Note invalide : 25
+Exercice3.NoteInvalideException: Exception de type NoteInvalideException. Note invalide : 25
+	at Exercice3.Evaluateur.verifierNote(Evaluateur.java:9)
+	at Exercice3.Evaluateur.main(Evaluateur.java:16)
+```
 ## Conclusion
 
 This exercise demonstrates how to define a custom exception to handle inappropriate values in a specific context. By throwing `NoteInvalideException` when the grade is outside the permitted range, I've learned how to better structure code to handle specific errors and thus improve application robustness. The implementation shows the practical application of exception handling in real-world scenarios, such as grade validation in an educational system.
