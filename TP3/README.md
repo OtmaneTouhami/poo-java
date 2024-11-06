@@ -1,6 +1,6 @@
 # Java Exception Handling Lab
 
-This repository contains three exercises demonstrating custom exception handling in Java. Each exercise focuses on creating and using specific exception classes for different validation scenarios.
+This folder contains three exercises demonstrating custom exception handling in Java. Each exercise focuses on creating and using specific exception classes for different validation scenarios.
 
 ## Exercises
 
