@@ -18,6 +18,11 @@ Here are the labs I've completed so far:
 * Created custom exception classes for different scenarios
 * Implemented robust error handling using try-catch blocks
 
+### [Lab 4: Java Collections and Streams](TP4)
+* Implemented various exercises demonstrating the use of Java Collections and Streams
+* Practiced operations on lists, maps, and sets
+* Applied stream operations for data manipulation and processing
+
 *I'll be adding more lab solutions as I complete them throughout the course.*
 
 ## Getting Started
