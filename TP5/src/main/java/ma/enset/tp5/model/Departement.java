@@ -4,10 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Departement {
-    private int id_depart;
+    private Integer id_depart;
     private String nom;
 
-    public Departement(int id_depart, String nom) {
+    public Departement(Integer id_depart, String nom) {
         this.id_depart = id_depart;
         this.nom = nom;
     }
@@ -19,11 +19,11 @@ public class Departement {
     public Departement() {
     }
 
-    public int getId_depart() {
+    public Integer getId_depart() {
         return id_depart;
     }
 
-    public void setId_depart(int id_depart) {
+    public void setId_depart(Integer id_depart) {
         this.id_depart = id_depart;
     }
 

@@ -72,7 +72,7 @@ public class Main {
 
     private static void testAttachProfessorToDepartment(IProfesseurMetier professeurMetier) throws SQLException {
         System.out.println("\n=== Attach Professor to Department ===");
-        boolean isAttached = professeurMetier.attachToDepartement(1, 2);
+        boolean isAttached = professeurMetier.attachToDepartement(1, 7);
         System.out.println(isAttached ? "Professor successfully attached to department!" : "Failed to attach professor to department.");
     }
 

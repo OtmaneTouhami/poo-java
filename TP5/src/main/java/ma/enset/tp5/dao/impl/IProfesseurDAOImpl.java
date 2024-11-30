@@ -132,7 +132,7 @@ public class IProfesseurDAOImpl implements IProfesseurDAO {
 
     @Override
     public Professeur save(Professeur professeur) {
-        if (professeur.getId_prof() == 0) {
+        if (professeur.getId_prof() == null) {
             String insertQuery = "INSERT INTO professor "
                     + "(nom, prenom, cin, adresse, telephone, email, date_recrutement) "
                     + "VALUES (?, ?, ?, ?, ?, ?, ?)";

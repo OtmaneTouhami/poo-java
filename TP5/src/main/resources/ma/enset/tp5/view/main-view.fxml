@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="ma.enset.tp5.controller.MainController">
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="School Management System" />
+            <TabPane fx:id="tabPane">
+                <Tab closable="false" text="Departments">
+                    <fx:include source="department-view.fxml" />
+                </Tab>
+                <Tab closable="false" text="Professors">
+                    <fx:include source="professor-view.fxml" />
+                </Tab>
+            </TabPane>
+        </VBox>
+    </top>
+</BorderPane>

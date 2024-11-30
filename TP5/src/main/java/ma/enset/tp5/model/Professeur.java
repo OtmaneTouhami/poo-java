@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class Professeur {
-    private int id_prof;
+    private Integer id_prof;
     private String nom;
     private String prenom;
     private String cin;
@@ -36,7 +36,7 @@ public class Professeur {
     public Professeur() {
     }
 
-    public int getId_prof() {
+    public Integer getId_prof() {
         return id_prof;
     }
 

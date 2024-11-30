@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.enset.tp5.controller.ProfessorController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Add/Edit Form -->
+    <GridPane hgap="10" vgap="10">
+        <HBox spacing="2" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="Last Name:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="lastNameField"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Label text="First Name:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="firstNameField"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <Label text="CIN:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="cinField"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="3" GridPane.rowIndex="0">
+            <Label text="Address:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="addressField"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="4" GridPane.rowIndex="0">
+            <Label text="Phone:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="phoneField"/>
+        </HBox>
+
+        <HBox spacing="2" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="Email:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="emailField"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label text="Hire Date:">
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <DatePicker fx:id="hireDatePicker"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="Department:" >
+                <HBox.margin>
+                    <Insets top="4.0"/>
+                </HBox.margin>
+            </Label>
+            <ComboBox fx:id="departmentCombo"/>
+        </HBox>
+
+        <HBox spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button text="Add" onAction="#handleAdd"/>
+            <Button text="Update" onAction="#handleUpdate"/>
+            <Button text="Clear" onAction="#handleClear"/>
+        </HBox>
+    </GridPane>
+
+    <!-- Professor Table -->
+    <TableView fx:id="professorTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="firstNameColumn" text="First Name"/>
+            <TableColumn fx:id="cinColumn" text="CIN"/>
+            <TableColumn fx:id="addressColumn" text="Address"/>
+            <TableColumn fx:id="phoneColumn" text="Phone"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="hireDateColumn" text="Hire Date"/>
+            <TableColumn fx:id="departmentColumn" text="Department"/>
+            <TableColumn fx:id="actionsColumn" text="Actions"/>
+        </columns>
+    </TableView>
+</VBox>

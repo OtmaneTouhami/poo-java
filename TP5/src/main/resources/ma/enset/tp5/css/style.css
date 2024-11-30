@@ -1,0 +1,47 @@
+/* style.css */
+.root {
+    -fx-font-family: "System";
+    -fx-background-color: #f4f4f4;
+}
+
+.button {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1976d2;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-padding: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 10 15 10 15;
+}
+
+.tab:selected {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+}

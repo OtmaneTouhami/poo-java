@@ -21,7 +21,7 @@ public class IDepartementDAOImpl implements IDepartementDAO {
 
     @Override
     public Departement save(Departement departement) {
-        if (departement.getId_depart() == 0) {
+        if (departement.getId_depart() == null) {
             String insertQuery = "INSERT INTO department (nom) VALUES (?)";
             try (
                     Connection connection = prepareConnection();
