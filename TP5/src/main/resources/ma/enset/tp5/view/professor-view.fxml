@@ -67,19 +67,20 @@
             </Label>
             <DatePicker fx:id="hireDatePicker"/>
         </HBox>
-        <HBox spacing="2" GridPane.columnIndex="2" GridPane.rowIndex="1">
-            <Label text="Department:" >
+
+        <HBox spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="addButton" text="Add" onAction="#handleAdd"/>
+            <Button text="Clear" onAction="#handleClear"/>
+        </HBox>
+        <HBox spacing="2" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Label text="Search:">
                 <HBox.margin>
                     <Insets top="4.0"/>
                 </HBox.margin>
             </Label>
-            <ComboBox fx:id="departmentCombo"/>
-        </HBox>
-
-        <HBox spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="1">
-            <Button text="Add" onAction="#handleAdd"/>
-            <Button text="Update" onAction="#handleUpdate"/>
-            <Button text="Clear" onAction="#handleClear"/>
+            <TextField fx:id="searchField"/>
+            <Button text="🔍" onAction="#handleSearch"/>
+            <Button text="Reset" onAction="#handleReset"/>
         </HBox>
     </GridPane>
 
@@ -87,7 +88,7 @@
     <TableView fx:id="professorTable" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="idColumn" text="ID"/>
-            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="lastNameColumn" text="Last Name"/>
             <TableColumn fx:id="firstNameColumn" text="First Name"/>
             <TableColumn fx:id="cinColumn" text="CIN"/>
             <TableColumn fx:id="addressColumn" text="Address"/>

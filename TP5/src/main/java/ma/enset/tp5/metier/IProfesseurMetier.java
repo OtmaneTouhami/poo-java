@@ -11,5 +11,5 @@ public interface IProfesseurMetier {
     Professeur addProfesseur(Professeur professeur);
     boolean deleteProfesseur(int id);
     Professeur updateProfesseur(Professeur professeur) throws SQLException;
-    boolean attachToDepartement(int prof_id, int depart_id) throws SQLException;
+    boolean attachToDepartement(Integer prof_id, Integer depart_id) throws SQLException;
 }

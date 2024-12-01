@@ -134,7 +134,16 @@ public class DepartmentController {
             dateColumn.setCellValueFactory(new PropertyValueFactory<>("date_recrutement"));
 
             // Add columns to table
-            tableView.getColumns().addAll(idColumn, nomColumn, prenomColumn, cinColumn, emailColumn, adresseColumn, phoneColumn, dateColumn);
+            tableView.getColumns().addAll(
+                    idColumn,
+                    nomColumn,
+                    prenomColumn,
+                    cinColumn,
+                    emailColumn,
+                    adresseColumn,
+                    phoneColumn,
+                    dateColumn
+            );
 
             // Add data to table
             tableView.getItems().addAll(professeurs);
@@ -199,7 +208,6 @@ public class DepartmentController {
             // Add new department
             Departement newDepartment = new Departement();
             newDepartment.setNom(departmentName);
-            System.out.println(newDepartment);
             departementMetier.addDepartement(newDepartment);
         }
 

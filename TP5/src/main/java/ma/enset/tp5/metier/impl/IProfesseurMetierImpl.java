@@ -68,7 +68,7 @@ public class IProfesseurMetierImpl implements IProfesseurMetier {
     }
 
     @Override
-    public boolean attachToDepartement(int prof_id, int depart_id) throws SQLException {
+    public boolean attachToDepartement(Integer prof_id, Integer depart_id) throws SQLException {
         return professeurDAO.attach(prof_id, depart_id) > 0;
     }
 }

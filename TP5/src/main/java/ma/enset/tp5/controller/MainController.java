@@ -12,7 +12,6 @@ public class MainController {
     @FXML
     private StackPane contentPane;
 
-
     // Method to load the Department view
     @FXML
     private void showDepartmentView() {
@@ -29,9 +28,9 @@ public class MainController {
     private void loadView(String fxmlFile) {
         try {
             Node view = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFile)));
-            contentPane.getChildren().setAll(view); // Clear old content and set new
+            contentPane.getChildren().setAll(view);
         } catch (IOException e) {
-            e.printStackTrace(); // Handle loading errors
+            e.printStackTrace();
         }
     }
 }

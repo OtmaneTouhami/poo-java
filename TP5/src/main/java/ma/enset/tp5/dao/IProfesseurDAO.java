@@ -13,5 +13,5 @@ public interface IProfesseurDAO {
     List<Professeur> getAll();
     Professeur save(Professeur professeur);
     int delete(int id);
-    int attach(int prof_id, int depart_id) throws SQLException;
+    int attach(Integer prof_id, Integer depart_id) throws SQLException;
 }

@@ -184,7 +184,8 @@ public class IProfesseurDAOImpl implements IProfesseurDAO {
         preparedStatement.setString(4, professeur.getAddresse());
         preparedStatement.setString(5, professeur.getTelephone());
         preparedStatement.setString(6, professeur.getEmail());
-        preparedStatement.setDate(7, java.sql.Date.valueOf(professeur.getDate_recrutement()));    }
+        preparedStatement.setDate(7, java.sql.Date.valueOf(professeur.getDate_recrutement()));
+    }
 
     @Override
     public int delete(int id) {
@@ -201,13 +202,17 @@ public class IProfesseurDAOImpl implements IProfesseurDAO {
     }
 
     @Override
-    public int attach(int prof_id, int depart_id) throws SQLException {
+    public int attach(Integer prof_id, Integer depart_id) {
         String query = "UPDATE professor SET id_depart = ? WHERE id_prof = ?";
         try (
                 Connection connection = prepareConnection();
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                PreparedStatement preparedStatement = connection.prepareStatement(query)
         ) {
-            preparedStatement.setInt(1, depart_id);
+            if (depart_id == null) {
+                preparedStatement.setNull(1, Types.INTEGER);
+            } else {
+                preparedStatement.setInt(1, depart_id);
+            }
             preparedStatement.setInt(2, prof_id);
             return preparedStatement.executeUpdate();
         } catch (SQLException e) {
