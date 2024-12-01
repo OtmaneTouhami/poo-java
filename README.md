@@ -23,6 +23,11 @@ Here are the labs I've completed so far:
 * Practiced operations on lists, maps, and sets
 * Applied stream operations for data manipulation and processing
 
+### [Lab 5: MySQL JDBC Connection and JavaFX](TP5)
+* Established a connection to a MySQL database using JDBC
+* Developed a JavaFX application for managing database records
+* Implemented CRUD operations (Create, Read, Update, Delete) with JavaFX UI
+
 *I'll be adding more lab solutions as I complete them throughout the course.*
 
 ## Getting Started
