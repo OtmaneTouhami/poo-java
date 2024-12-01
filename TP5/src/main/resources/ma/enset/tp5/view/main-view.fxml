@@ -9,8 +9,8 @@
     <top>
         <VBox spacing="10" style="-fx-padding: 10;">
             <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="School Management System"/>
-            <TabPane>
-                <Tab closable="false" text="Professors">
+            <TabPane fx:id="tabPane">
+                <Tab closable="false" text="Professors" fx:id="professorTab">
                     <fx:include source="professor-view.fxml"/>
                 </Tab>
                 <Tab closable="false" text="Departments">

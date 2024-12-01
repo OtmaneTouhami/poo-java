@@ -23,7 +23,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ProfessorController {
+public class ProfessorController implements Refreshable {
     // Input Fields
     @FXML
     private TextField lastNameField;
@@ -325,4 +325,8 @@ public class ProfessorController {
         return matcher.find();
     }
 
+    @Override
+    public void refresh() {
+        loadProfessors();
+    }
 }

@@ -2,33 +2,42 @@ package ma.enset.tp5.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.StackPane;
-import javafx.scene.Node;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class MainController {
     @FXML
-    private StackPane contentPane;
+    private TabPane tabPane;
 
-    // Method to load the Department view
     @FXML
-    private void showDepartmentView() {
-        loadView("/ma/enset/tp5/view/department-view.fxml");
+    private Tab professorTab;
+
+    private ProfessorController professorController;
+
+    @FXML
+    public void initialize() {
+        loadProfessorView();
+        tabPane.getSelectionModel()
+                .selectedItemProperty()
+                .addListener((observable, oldTab, newTab) -> {
+                    if (newTab == professorTab && professorController != null) {
+                        professorController.refresh();
+                    }
+                });
     }
 
-    // Method to load the Professor view
-    @FXML
-    private void showProfessorView() {
-        loadView("/ma/enset/tp5/view/professor-view.fxml");
-    }
-
-    // Helper method to load a view into the StackPane
-    private void loadView(String fxmlFile) {
+    private void loadProfessorView() {
         try {
-            Node view = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFile)));
-            contentPane.getChildren().setAll(view);
+            FXMLLoader loader = new FXMLLoader(
+                    Objects.requireNonNull(
+                            getClass().getResource("/ma/enset/tp5/view/professor-view.fxml")
+                    )
+            );
+            professorTab.setContent(loader.load());
+            professorController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
