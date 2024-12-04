@@ -5,7 +5,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,9 +27,7 @@ public class SchoolApplication extends Application {
             stage.show();
 
             // Handle window close request
-            stage.setOnCloseRequest(event -> {
-                Platform.exit();
-            });
+            stage.setOnCloseRequest(event -> Platform.exit());
 
         } catch (IOException e) {
             showErrorDialog("Application Error",

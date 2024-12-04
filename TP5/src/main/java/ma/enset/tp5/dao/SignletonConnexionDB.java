@@ -14,7 +14,7 @@ public class SignletonConnexionDB {
             // Database credentials
             String url = "jdbc:mysql://localhost:3306/school_db";
             String username = "root";
-            String password = "Slme@1234";
+            String password = "";
             connection = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException e) {
             throw new SQLException("JDBC Driver not found", e);
@@ -34,10 +34,4 @@ public class SignletonConnexionDB {
         return connection;
     }
 
-
-//    public static void main(String[] args) throws SQLException {
-//        SignletonConnexionDB dbConnection = SignletonConnexionDB.getInstance();
-//        Connection cn = dbConnection.getConnection();
-//        System.out.println("Database connected: " + !cn.isClosed());
-//    }
 }
