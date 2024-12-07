@@ -28,6 +28,12 @@ Here are the labs I've completed so far:
 * Developed a JavaFX application for managing database records
 * Implemented CRUD operations (Create, Read, Update, Delete) with JavaFX UI
 
+### [Lab 6: Generics and I/O Operations](TP6)
+* Implemented a Java program to simulate the 'ls' command for file system exploration
+* Created a phone directory management system using file I/O operations
+* Developed a generic interface and implementations for managing Products and Clients with serialization
+* Applied file handling, generics, and object-oriented principles in practical scenarios
+
 *I'll be adding more lab solutions as I complete them throughout the course.*
 
 ## Getting Started
