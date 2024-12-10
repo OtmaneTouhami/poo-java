@@ -34,6 +34,12 @@ Here are the labs I've completed so far:
 * Developed a generic interface and implementations for managing Products and Clients with serialization
 * Applied file handling, generics, and object-oriented principles in practical scenarios
 
+### [Lab 7: Java Multithreading](TP7)
+* Implemented concurrent number printing using multiple threads
+* Created a parallel sum calculation system that divides and processes numbers across threads
+* Demonstrated thread creation, execution, and synchronization concepts
+* Applied practical multithreading principles in Java applications
+
 *I'll be adding more lab solutions as I complete them throughout the course.*
 
 ## Getting Started
