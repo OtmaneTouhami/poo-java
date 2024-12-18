@@ -40,6 +40,12 @@ Here are the labs I've completed so far:
 * Demonstrated thread creation, execution, and synchronization concepts
 * Applied practical multithreading principles in Java applications
 
+### [Lab 8: Java Network Programming](TP8)
+* Implemented a client-server Magic Number guessing game using socket programming
+* Developed a File Server System with multi-client support
+* Applied fundamental concepts of socket programming and client-server architecture
+* Created robust networking applications with proper error handling and resource management
+
 *I'll be adding more lab solutions as I complete them throughout the course.*
 
 ## Getting Started
